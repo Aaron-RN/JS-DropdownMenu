@@ -1,5 +1,5 @@
-import './css/dropdown.css';
-import DropDownMenu from './menu/dropdown';
+import '../css/dropdown.css';
+import DropDownMenu from './dropdown';
 
 class MenuHandler {
   constructor() {
