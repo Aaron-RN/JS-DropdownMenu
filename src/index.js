@@ -1,17 +1,41 @@
-import MenuHandler from './menu/menuhandler';
+import './css/dropdown.css';
+import DropDownMenu from './menu/dropdown';
 
-const menuHandler = new MenuHandler();
-menuHandler.constructMenus();
+class MenuHandler {
+  constructor() {
+    this.menus = [];
+  }
 
-function test() {
-  const p = document.createElement('p');
-  p.innerHTML = `Now, the next thing we want to do is rotate the bottom cat upside down, using the transform property. That way, both cats will be underneath the white block, with only their heads sticking out.
+  constructMenus() {
+    const dropDowns = document.querySelectorAll('*[data-dropDownMenu]');
 
-But doing so can cause more z-index-related confusion. We’ll address the problem and the solution in the next part.
+    dropDowns.forEach((elem) => {
+      this.addMenu(new DropDownMenu(elem, this));
+    });
 
-3. Setting some CSS p`;
+    const menuBackground = document.createElement('div');
+    this.menuBackground = menuBackground;
+    menuBackground.classList.add('aa-menuBG');
+    menuBackground.classList.add('aa-dropDown-hide');
+    menuBackground.addEventListener('click', () => {
+      this.hideMenus();
+    });
 
-  document.body.appendChild(p);
+    document.body.appendChild(menuBackground);
+  }
+
+  allMenus() { return this.menus; }
+
+  addMenu(dropdown) { this.menus.push(dropdown); }
+
+  // Hides all menus except the one passed as a parameter
+  hideMenus(dropdown) {
+    const menus = this.allMenus();
+    this.menuBackground.classList.add('aa-dropDown-hide');
+    menus.forEach((elem) => {
+      if (dropdown !== elem) { elem.hideMenu(); }
+    });
+  }
 }
 
-test();
+export default MenuHandler;

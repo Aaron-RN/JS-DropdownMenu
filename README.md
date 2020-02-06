@@ -5,7 +5,15 @@ A bare minimum importable module for JavaScript drop down menus
 
 ## To install module
 
-npm install ....etc
+Add the following JavaScript code to your main js file
+```JavaScript
+import MenuHandler from '@aaronrory/js-dropdownmenu';
+
+const menuHandler =  new MenuHandler();
+menuHandler.constructMenus();
+```
+To install the module use the command:
+```npm install @aaronrory/js-dropdownmenu --save```
 
 ## Instructions
 
