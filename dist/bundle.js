@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// Imports\nvar ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\nexports = ___CSS_LOADER_API_IMPORT___(false);\n// Module\nexports.push([module.i, \"html { box-sizing: border-box; }\\r\\n\\r\\n*,\\r\\n*::before,\\r\\n*::after {\\r\\n  box-sizing: border-box;\\r\\n}\\r\\n\\r\\n*,\\r\\n*::before,\\r\\n*::after {\\r\\n  -webkit-transition-duration: 0.25s;\\r\\n  -moz-transition-duration: 0.25s;\\r\\n  transition-duration: 0.25s;\\r\\n}\\r\\n\\r\\n.horizontalBar{\\r\\n  z-index: 99;\\r\\n  position: relative;\\r\\n  display: flex;\\r\\n  background-color: cadetblue;\\r\\n  color: white;\\r\\n}\\r\\n\\r\\n.horizontalBar *{\\r\\n  padding: 4px 8px;\\r\\n}\\r\\n\\r\\n.aa-dropDownMenu{\\r\\n  cursor: pointer;\\r\\n}\\r\\n.aa-dropDownContent{\\r\\n  display: none;\\r\\n  z-index: 98;\\r\\n  position: absolute;\\r\\n  align-items: flex-start;\\r\\n  flex-direction: column;\\r\\n  background-color: wheat;\\r\\n}\\r\\n\\r\\n.aa-dropDown{\\r\\n  \\r\\n}\\r\\n\\r\\n.dropDown-show{ display: flex; }\", \"\"]);\n// Exports\nmodule.exports = exports;\n\n\n//# sourceURL=webpack:///./src/css/dropdown.css?./node_modules/css-loader/dist/cjs.js");
+eval("// Imports\nvar ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\nexports = ___CSS_LOADER_API_IMPORT___(false);\n// Module\nexports.push([module.i, \"html { box-sizing: border-box; }\\r\\n\\r\\n*,\\r\\n*::before,\\r\\n*::after {\\r\\n  box-sizing: border-box;\\r\\n}\\r\\n\\r\\n*,\\r\\n*::before,\\r\\n*::after {\\r\\n  -webkit-transition-duration: 0.25s;\\r\\n  -moz-transition-duration: 0.25s;\\r\\n  transition-duration: 0.25s;\\r\\n}\\r\\n\\r\\n.horizontalBar{\\r\\n  z-index: 99;\\r\\n  position: relative;\\r\\n  display: flex;\\r\\n  background-color: cadetblue;\\r\\n  color: white;\\r\\n}\\r\\n\\r\\n.horizontalBar *{\\r\\n  padding: 4px 8px;\\r\\n}\\r\\n\\r\\n.aa-menuBG{\\r\\n  z-index: 97;\\r\\n  display: block;\\r\\n  position: fixed;\\r\\n  width: 100%;\\r\\n  height: 100%;\\r\\n  margin: 0 auto;\\r\\n}\\r\\n\\r\\n.aa-dropDownMenu{\\r\\n  cursor: pointer;\\r\\n}\\r\\n.aa-dropDownContent{\\r\\n  display: none;\\r\\n  z-index: 98;\\r\\n  position: absolute;\\r\\n  align-items: flex-start;\\r\\n  flex-direction: column;\\r\\n  background-color: #FFF;\\r\\n  border: 2px solid #EEE;\\r\\n  box-shadow: 2px 4px 8px rgba(0,0,0,0.1);\\r\\n  border-radius: 8px;\\r\\n}\\r\\n\\r\\n.aa-dropDown-item{\\r\\n  \\r\\n}\\r\\n\\r\\n.aa-dropDown-item:hover{\\r\\n  background-color: #EEE;\\r\\n}\\r\\n\\r\\n.aa-dropDown-show{ display: flex; }\\r\\n.aa-dropDown-hide{ display: none; }\", \"\"]);\n// Exports\nmodule.exports = exports;\n\n\n//# sourceURL=webpack:///./src/css/dropdown.css?./node_modules/css-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -132,18 +132,6 @@ eval("var api = __webpack_require__(/*! ../../node_modules/style-loader/dist/run
 
 /***/ }),
 
-/***/ "./src/dropdown.js":
-/*!*************************!*\
-  !*** ./src/dropdown.js ***!
-  \*************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\nclass MenuHandler{\r\n  constructor(){\r\n    this.menus = [];\r\n  }\r\n  \r\n  constructMenus(){\r\n    const dropDowns = document.querySelectorAll(\"*[data-dropDownMenu]\");\r\n  \r\n    dropDowns.forEach( (elem) => { \r\n      this.addMenu(new DropDownMenu(elem));\r\n    });\r\n  }\r\n  \r\n  allMenus(){\r\n    console.log(this.menus);\r\n  }\r\n  \r\n  addMenu(dropdown){\r\n    this.menus.push(dropdown);\r\n  }\r\n}\r\n\r\nclass DropDownMenu{\r\n  constructor(element){\r\n    this.mainElement = element;\r\n    const mainElementContent = Array.from(this.mainElement.children);\r\n    this.content = mainElementContent.find( (elem) => elem.getAttribute('data-dropDownContent', 'true'));\r\n    this.dropDownItems = Array.from(this.content.children);\r\n    \r\n    this.mainElement.classList.add(\"aa-dropDownMenu\");\r\n    this.content.classList.add(\"aa-dropDownContent\");\r\n    this.dropDownItems.forEach( child => child.classList.add(\"aa-dropDown\"));\r\n    \r\n    this.mainElement.addEventListener('click', () => {\r\n      this.content.classList.toggle('dropDown-show')\r\n    })\r\n  }\r\n}\r\n\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (MenuHandler);\r\n\n\n//# sourceURL=webpack:///./src/dropdown.js?");
-
-/***/ }),
-
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
@@ -152,7 +140,31 @@ eval("__webpack_require__.r(__webpack_exports__);\nclass MenuHandler{\r\n  const
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css_dropdown_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./css/dropdown.css */ \"./src/css/dropdown.css\");\n/* harmony import */ var _css_dropdown_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_dropdown_css__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _dropdown__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./dropdown */ \"./src/dropdown.js\");\n\r\n\r\n\r\nconst menuHandler = new _dropdown__WEBPACK_IMPORTED_MODULE_1__[\"default\"]();\r\nmenuHandler.constructMenus();\r\nmenuHandler.allMenus();\r\n\r\nfunction test(){\r\n  const p = document.createElement('p');\r\n  p.innerHTML = `Now, the next thing we want to do is rotate the bottom cat upside down, using the transform property. That way, both cats will be underneath the white block, with only their heads sticking out.\r\n\r\nBut doing so can cause more z-index-related confusion. We’ll address the problem and the solution in the next part.\r\n\r\n3. Setting some CSS p`;\r\n  \r\n  document.body.appendChild(p);\r\n}\r\n\r\ntest();\r\n\r\n\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css_dropdown_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./css/dropdown.css */ \"./src/css/dropdown.css\");\n/* harmony import */ var _css_dropdown_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_dropdown_css__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _menu_menuhandler__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./menu/menuhandler */ \"./src/menu/menuhandler.js\");\n\n\n\nconst menuHandler = new _menu_menuhandler__WEBPACK_IMPORTED_MODULE_1__[\"default\"]();\nmenuHandler.constructMenus();\n\nfunction test() {\n  const p = document.createElement('p');\n  p.innerHTML = `Now, the next thing we want to do is rotate the bottom cat upside down, using the transform property. That way, both cats will be underneath the white block, with only their heads sticking out.\n\nBut doing so can cause more z-index-related confusion. We’ll address the problem and the solution in the next part.\n\n3. Setting some CSS p`;\n\n  document.body.appendChild(p);\n}\n\ntest();\n\n\n//# sourceURL=webpack:///./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/menu/dropdown.js":
+/*!******************************!*\
+  !*** ./src/menu/dropdown.js ***!
+  \******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nclass DropDownMenu {\n  constructor(element, handler) {\n    this.handler = handler;\n    this.mainElement = element;\n    const mainElementContent = Array.from(this.mainElement.children);\n    this.content = mainElementContent.find((elem) => elem.getAttribute('data-dropDownContent', 'true'));\n    this.dropDownItems = Array.from(this.content.children);\n\n    this.mainElement.classList.add('aa-dropDownMenu');\n    this.content.classList.add('aa-dropDownContent');\n    this.dropDownItems.forEach(child => child.classList.add('aa-dropDown-item'));\n\n    this.mainElement.addEventListener('click', () => {\n      this.content.classList.toggle('aa-dropDown-show');\n      this.handler.menuBackground.classList.toggle('aa-dropDown-hide');\n    });\n  }\n\n  hideMenu() { this.content.classList.remove('aa-dropDown-show'); }\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (DropDownMenu);\n\n//# sourceURL=webpack:///./src/menu/dropdown.js?");
+
+/***/ }),
+
+/***/ "./src/menu/menuhandler.js":
+/*!*********************************!*\
+  !*** ./src/menu/menuhandler.js ***!
+  \*********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _dropdown__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./dropdown */ \"./src/menu/dropdown.js\");\n\n\nclass MenuHandler {\n  constructor() {\n    this.menus = [];\n  }\n\n  constructMenus() {\n    const dropDowns = document.querySelectorAll('*[data-dropDownMenu]');\n\n    dropDowns.forEach((elem) => {\n      this.addMenu(new _dropdown__WEBPACK_IMPORTED_MODULE_0__[\"default\"](elem, this));\n    });\n\n    const menuBackground = document.createElement('div');\n    this.menuBackground = menuBackground;\n    menuBackground.classList.add('aa-menuBG');\n    menuBackground.classList.add('aa-dropDown-hide');\n    menuBackground.addEventListener('click', () => {\n      this.hideMenus();\n    });\n\n    document.body.appendChild(menuBackground);\n  }\n\n  allMenus() { return this.menus; }\n\n  addMenu(dropdown) { this.menus.push(dropdown); }\n\n  hideMenus() {\n    const menus = this.allMenus();\n    this.menuBackground.classList.toggle('aa-dropDown-hide');\n    menus.forEach((elem) => elem.hideMenu());\n  }\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (MenuHandler);\n\n\n//# sourceURL=webpack:///./src/menu/menuhandler.js?");
 
 /***/ })
 
