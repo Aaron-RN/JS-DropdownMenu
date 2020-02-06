@@ -10,8 +10,8 @@ npm install ....etc
 ## Instructions
 
 Simply follow the similar layout to add this dropbox functionality to your html page.
-You must have two main div elements with the ```html data-dropDownMenu = "verticle" ``` attribute for the parent and
-```html data-dropDownContent = "true" ``` attribute in the child div containing the dropdown links or items.
+You must have two main div elements with the ``` data-dropDownMenu = "verticle" ``` attribute for the parent and
+``` data-dropDownContent = "true" ``` attribute in the child div containing the dropdown links or items.
 
 ```html
 <div data-dropDownMenu="verticle">

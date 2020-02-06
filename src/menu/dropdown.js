@@ -11,8 +11,9 @@ class DropDownMenu {
     this.dropDownItems.forEach(child => child.classList.add('aa-dropDown-item'));
 
     this.mainElement.addEventListener('click', () => {
+      this.handler.hideMenus(this);
+      this.handler.menuBackground.classList.remove('aa-dropDown-hide');
       this.content.classList.toggle('aa-dropDown-show');
-      this.handler.menuBackground.classList.toggle('aa-dropDown-hide');
     });
   }
 

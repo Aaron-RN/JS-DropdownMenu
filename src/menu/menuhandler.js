@@ -1,3 +1,4 @@
+import '../css/dropdown.css';
 import DropDownMenu from './dropdown';
 
 class MenuHandler {
@@ -27,10 +28,13 @@ class MenuHandler {
 
   addMenu(dropdown) { this.menus.push(dropdown); }
 
-  hideMenus() {
+  // Hides all menus except the one passed as a parameter
+  hideMenus(dropdown) {
     const menus = this.allMenus();
-    this.menuBackground.classList.toggle('aa-dropDown-hide');
-    menus.forEach((elem) => elem.hideMenu());
+    this.menuBackground.classList.add('aa-dropDown-hide');
+    menus.forEach((elem) => {
+      if (dropdown !== elem) { elem.hideMenu(); }
+    });
   }
 }
 

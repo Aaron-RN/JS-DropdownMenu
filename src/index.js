@@ -1,4 +1,3 @@
-import './css/dropdown.css';
 import MenuHandler from './menu/menuhandler';
 
 const menuHandler = new MenuHandler();
