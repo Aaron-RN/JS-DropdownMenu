@@ -1,7 +1,7 @@
 {
   "name": "JS-DropdownMenu",
   "version": "1.0.0",
-  "description": "An importable module for JavaScript drop down menus",
+  "description": "A bare minimum importable module for JavaScript drop down menus",
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
