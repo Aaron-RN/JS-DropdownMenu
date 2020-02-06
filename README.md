@@ -33,7 +33,7 @@ You must have two main div elements with the ``` data-dropDownMenu = "verticle" 
 ```
 
 ## Live Link
-Live Githack Link: https://raw.githack.com/Aaron-RN/JS-DropdownMenu/development/dist/index.html
+Live Githack Link: https://raw.githack.com/Aaron-RN/JS-DropdownMenu/gitshow/dist/index.html
 
 ## Built With
 
