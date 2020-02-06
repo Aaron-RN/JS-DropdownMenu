@@ -1,0 +1,45 @@
+html { box-sizing: border-box; }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-transition-duration: 0.25s;
+  -moz-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+}
+
+.horizontalBar{
+  z-index: 99;
+  position: relative;
+  display: flex;
+  background-color: cadetblue;
+  color: white;
+}
+
+.horizontalBar *{
+  padding: 4px 8px;
+}
+
+.aa-dropDownMenu{
+  cursor: pointer;
+}
+.aa-dropDownContent{
+  display: none;
+  z-index: 98;
+  position: absolute;
+  align-items: flex-start;
+  flex-direction: column;
+  background-color: wheat;
+}
+
+.aa-dropDown{
+  
+}
+
+.dropDown-show{ display: flex; }

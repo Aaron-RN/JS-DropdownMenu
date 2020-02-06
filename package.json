@@ -1,0 +1,31 @@
+{
+  "name": "JS-DropdownMenu",
+  "version": "1.0.0",
+  "description": "An importable module for JavaScript drop down menus",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode production",
+    "watch": "webpack --watch --mode development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aaron-RN/JS-DropdownMenu.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aaron-RN/JS-DropdownMenu/issues"
+  },
+  "homepage": "https://github.com/Aaron-RN/JS-DropdownMenu#readme",
+  "devDependencies": {
+    "css-loader": "^3.4.2",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.20.1",
+    "style-loader": "^1.1.3",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  }
+}
