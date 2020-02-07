@@ -1,8 +1,8 @@
 {
   "name": "@aaronrory/js-dropdownmenu",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A bare minimum importable module for JavaScript drop down menus",
-  "main": "./index.js",
+  "main": "./src/menu/menuhandler.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode production",
