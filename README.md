@@ -39,7 +39,8 @@ Live Githack Link: https://raw.githack.com/Aaron-RN/JS-DropdownMenu/gitshow/dist
 
 - HTML, CSS
 - JavaScript
-- Webpack
+- Node.js
+- NPM Webpack
 
 ## Authors
 
